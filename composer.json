@@ -1,0 +1,19 @@
+{
+    "name": "omar/mra-auction",
+    "description": "An online auction system for the MRA",
+    "type": "project",
+    "license": "MIT",
+    "autoload": {
+        "psr-4": {
+            "Omar\\MraAuction\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Omar Chibwana"
+        }
+    ],
+    "require": {
+        "league/plates": "^3.6"
+    }
+}

@@ -1,0 +1,153 @@
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: #EFEEEF; /* Light Gray */
+    color: #094524; /* Dark Green for text */
+}
+
+header {
+    background: #094524; /* Dark Green */
+    color: #fff;
+    padding: 1rem;
+}
+
+header nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: space-around;
+    padding: 0;
+}
+
+header nav ul li a {
+    color: #EFEEEF; /* Light Gray */
+    text-decoration: none;
+}
+
+/* Auction Items Section */
+.auction-items {
+    margin: 2rem 0;
+    padding: 1rem;
+    background-color: #EFEEEF; /* Light Gray */
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+.auction-items h2 {
+    margin-bottom: 1rem;
+    font-size: 1.5rem;
+    color: #094524; /* Dark Green */
+}
+
+/* Item Grid Layout */
+.item-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1.5rem;
+}
+
+/* Individual Auction Item */
+.auction-item {
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 1rem;
+    text-align: center;
+    background-color: #fff;
+    transition: box-shadow 0.3s ease;
+}
+
+.auction-item:hover {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.auction-item img {
+    max-width: 100%;
+    height: auto;
+    border-bottom: 1px solid #ddd;
+    margin-bottom: 1rem;
+}
+
+.auction-item h3 {
+    font-size: 1.2rem;
+    margin-bottom: 0.5rem;
+    color: #094524; /* Dark Green */
+}
+
+.auction-item p {
+    font-size: 0.9rem;
+    color: #555;
+    margin-bottom: 1rem;
+}
+
+.bid-button {
+    display: inline-block;
+    background-color: #FECD0B; /* Yellow */
+    color: #094524; /* Dark Green */
+    padding: 0.5rem 1rem;
+    font-size: 0.9rem;
+    text-decoration: none;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.bid-button:hover {
+    background-color: #0B381B; /* Darker Green */
+    color: #fff;
+}
+
+/* Footer */
+footer {
+    background: #094524; /* Dark Green */
+    color: #fff;
+    text-align: center;
+    padding: 1rem;
+    margin-top: 2rem;
+}
+
+/* About Page Styles */
+.about-container {
+    margin: 2rem auto;
+    padding: 2rem;
+    max-width: 800px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    color: #094524; /* Dark Green */
+}
+
+.about-container h1 {
+    text-align: center;
+    margin-bottom: 1.5rem;
+    color: #094524; /* Dark Green */
+}
+
+.about-container section {
+    margin-bottom: 2rem;
+}
+
+.about-container h2 {
+    margin-bottom: 1rem;
+    color: #0B381B; /* Darker Green */
+}
+
+.about-container p, .about-container ul {
+    font-size: 1rem;
+    line-height: 1.6;
+}
+
+.about-container ul {
+    list-style-type: disc;
+    padding-left: 1.5rem;
+}
+
+.about-container ul li {
+    margin-bottom: 0.5rem;
+}
+
+.about-container strong {
+    color: #FECD0B; /* Yellow for highlights */
+}
