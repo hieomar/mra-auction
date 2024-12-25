@@ -49,6 +49,7 @@ Welcome to the MRA Online Auction platform. This project provides a secure and t
 5. Use the login and register buttons to authenticate as a user.
 
 ## Folder Structure
+```sh
 ├───public
 │   ├───css
 │   └───images
@@ -64,6 +65,7 @@ Welcome to the MRA Online Auction platform. This project provides a secure and t
     ├───layouts
     ├───pages
     └───partials
+```
 
 ## License
 
