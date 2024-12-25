@@ -3,6 +3,7 @@
 class AuctionItem {
     public $id;
     public $title;
+    public $image;
     public $description;
     public $startingBid;
     public $currentBid;
@@ -12,6 +13,7 @@ class AuctionItem {
     public function __construct($id, $title, $description, $startingBid, $currentBid, $endTime) {
         $this->id = $id;
         $this->title = $title;
+        $this->image = $image;
         $this->description = $description;
         $this->startingBid = $startingBid;
         $this->currentBid = $currentBid;
@@ -25,6 +27,10 @@ class AuctionItem {
 
     public function getTitle() {
         return $this->title;
+    }
+
+    public function getImage() {
+        return $this->image;
     }
 
     public function getDescription() {

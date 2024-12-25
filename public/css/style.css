@@ -8,10 +8,88 @@ body {
     color: #094524; /* Dark Green for text */
 }
 
+/* Header and Navigation Styles */
 header {
-    background: #094524; /* Dark Green */
-    color: #fff;
-    padding: 1rem;
+    background: #094524;
+    padding: 1rem 2rem;
+}
+
+header nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.logo-container {
+    flex: 0 0 auto;
+}
+
+.logo-container img {
+    height: 40px;
+    width: auto;
+}
+
+.nav-links {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+}
+
+.nav-links ul {
+    display: flex;
+    gap: 2rem;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.nav-links a {
+    color: #EFEEEF;
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+    color: #FECD0B;
+}
+
+.auth-buttons {
+    display: flex;
+    gap: 1rem;
+    margin-left: 2rem;
+}
+
+.auth-button {
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.login-btn {
+    background: transparent;
+    border: 1px solid #FECD0B;
+    color: #FECD0B;
+}
+
+.login-btn:hover {
+    background: #FECD0B;
+    color: #094524;
+}
+
+.register-btn {
+    background: #FECD0B;
+    border: 1px solid #FECD0B;
+    color: #094524;
+}
+
+.register-btn:hover {
+    background: #0B381B;
+    color: #FECD0B;
 }
 
 header nav ul {
@@ -24,6 +102,38 @@ header nav ul {
 header nav ul li a {
     color: #EFEEEF; /* Light Gray */
     text-decoration: none;
+}
+
+/* Modal Styles */
+.modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 1000;
+}
+
+.modal-content {
+    position: relative;
+    background: #fff;
+    width: 90%;
+    max-width: 400px;
+    margin: 100px auto;
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.close-modal {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    font-size: 1.5rem;
+    cursor: pointer;
+    color: #094524;
 }
 
 /* Auction Items Section */
@@ -150,4 +260,94 @@ footer {
 
 .about-container strong {
     color: #FECD0B; /* Yellow for highlights */
+}
+
+/* Item Details Page Styles */
+.item-details {
+    max-width: 800px;
+    margin: 2rem auto;
+    padding: 2rem;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.item-details img {
+    width: 100%;
+    max-height: 400px;
+    object-fit: cover;
+    border-radius: 5px;
+    margin-bottom: 1.5rem;
+}
+
+.item-details h2 {
+    color: #094524;
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+}
+
+.item-details p {
+    color: #555;
+    line-height: 1.6;
+    margin-bottom: 1.5rem;
+}
+
+/* Bids List Section */
+.bids-list {
+    max-width: 800px;
+    margin: 2rem auto;
+    padding: 2rem;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.bids-list h1 {
+    color: #094524;
+    margin-bottom: 1.5rem;
+    font-size: 1.5rem;
+}
+
+.bids-list ul {
+    list-style: none;
+    padding: 0;
+}
+
+.bids-list li {
+    padding: 1rem;
+    border-bottom: 1px solid #eee;
+    color: #555;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: background-color 0.3s ease;
+}
+
+.bids-list li:last-child {
+    border-bottom: none;
+}
+
+.bids-list li:hover {
+    background-color: #f9f9f9;
+}
+
+/* Add a bid button style */
+.place-bid-button {
+    display: block;
+    width: 100%;
+    padding: 1rem;
+    margin-top: 1rem;
+    background-color: #FECD0B;
+    color: #094524;
+    border: none;
+    border-radius: 5px;
+    font-size: 1.1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.place-bid-button:hover {
+    background-color: #0B381B;
+    color: #fff;
 }

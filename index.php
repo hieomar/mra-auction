@@ -25,6 +25,7 @@ switch ($page) {
             $itemDetails = [
                 'id' => $auctionItemId,
                 'name' => 'Sample Item', // Placeholder for item name
+                'image' => 'https://api.algobook.info/v1/randomimage?category=computer', // Placeholder for item image
                 'description' => 'This is a sample item description.', // Placeholder for item description
             ];
             echo $templates->render('pages/itemDetails', ['title' => 'Item Details', 'item' => $itemDetails, 'bids' => $bids]);

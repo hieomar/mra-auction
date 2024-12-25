@@ -6,7 +6,6 @@ class Bid {
     public $bidderId;
     public $bidAmount;
     public $bidTime;
-    public $bids = [];
 
     public function __construct($id, $auctionItemId, $bidderId, $bidAmount, $bidTime) {
         $this->id = $id;
@@ -14,7 +13,6 @@ class Bid {
         $this->bidderId = $bidderId;
         $this->bidAmount = $bidAmount;
         $this->bidTime = $bidTime;
-        $this->bids = $bids;
     }
 
     public function getBidDetails() {

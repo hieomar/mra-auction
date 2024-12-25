@@ -7,9 +7,9 @@ class BidController {
     public function getAllBids($auctionItemId) {
         // Placeholder for fetching bids from a data source
         $bids = [
-            new Bid(1, $auctionItemId, 101, 100.00, '2024-01-01 10:00:00'),
-            new Bid(2, $auctionItemId, 102, 150.00, '2024-01-01 11:00:00'),
-            new Bid(3, $auctionItemId, 103, 200.00, '2024-01-01 12:00:00'),
+            new Bid(1, $auctionItemId, 101, 100.00, 'January 1, 2024 10:00:00'),
+            new Bid(2, $auctionItemId, 102, 150.00, 'January 1, 2024 11:00:00'),
+            new Bid(3, $auctionItemId, 103, 200.00, 'January 1, 2024 12:00:00'),
         ];
 
         return $bids;

@@ -2,9 +2,11 @@
 
 <h1>Item Details</h1>
 <section class="item-details">
+    <img src="<?= $item['image'] ?>" alt="<?= $item['name'] ?>" />
     <h2><?= $item['name'] ?></h2>
     <p><?= $item['description'] ?></p>
 </section>
+<button class="bid-button">Place Bid</button>
 
 <h1>Top 3 Bids for Auction Item</h1>
 <section class="bids-list">
