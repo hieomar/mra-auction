@@ -7,20 +7,10 @@
     <link rel="stylesheet" href="../../public/css/style.css">
 </head>
 <body>
-    <header>
-        <nav>
-            <ul>
-                <li><a href="/?page=home">Home</a></li>
-                <li><a href="/?page=auctions">Auctions</a></li>
-                <li><a href="/?page=about">About Us</a></li>
-            </ul>
-        </nav>
-    </header>
+<?php $this->insert('partials/header') ?>
     <main>
         <?= $this->section('content') ?>
     </main>
-    <footer>
-        <p>&copy; <?= date('Y') ?> MRA Online Auction. All rights reserved.</p>
-    </footer>
+<?php $this->insert('partials/footer') ?>
 </body>
 </html>
