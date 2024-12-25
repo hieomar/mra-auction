@@ -28,7 +28,7 @@ Welcome to the MRA Online Auction platform. This project provides a secure and t
 1. Clone the repository:
 
     ```sh
-    git clone https://github.com/yourusername/mra-auction.git
+    git clone https://github.com/hieomar/mra-auction.git
     cd mra-auction
     ```
 
