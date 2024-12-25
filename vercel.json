@@ -6,12 +6,11 @@
         "use": "vercel-php"
       }
     ],
-    "framework": null,
-    "routes": [{
+    "routes": [
+      {
         "src": "/(.*)",
         "dest": "index.php"
-    }],
-    "buildCommand": "composer install"
-
+      }
+    ]
   }
   
