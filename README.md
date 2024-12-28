@@ -38,8 +38,10 @@ Welcome to the MRA Online Auction platform. This project provides a secure and t
     composer install
     ```
 
-3. Set up your web server to serve the [public](http://_vscodecontentref_/1) directory as the document root.
-
+3. Run the command in the root of the project to start the php server
+    ```sh
+    php -S 127.0.0.1:8000
+    ```
 ## Usage
 
 1. Start your web server and navigate to the project URL (`http://localhost`).
