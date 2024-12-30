@@ -1,7 +1,7 @@
 <?php
 
-require '/vendor/autoload.php';
-require '/src/controllers/BidController.php';
+require './vendor/autoload.php';
+require './src/controllers/BidController.php';
 
 use League\Plates\Engine;
 

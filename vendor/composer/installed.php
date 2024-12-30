@@ -3,7 +3,7 @@
         'name' => 'omar/mra-auction',
         'pretty_version' => 'dev-master',
         'version' => 'dev-master',
-        'reference' => '93832ac6f65ea154e7bb91117305d80c8942d0ee',
+        'reference' => 'f08958c95a84453db03de1e05df7928dd223c652',
         'type' => 'project',
         'install_path' => __DIR__ . '/../../',
         'aliases' => array(),
@@ -22,7 +22,7 @@
         'omar/mra-auction' => array(
             'pretty_version' => 'dev-master',
             'version' => 'dev-master',
-            'reference' => '93832ac6f65ea154e7bb91117305d80c8942d0ee',
+            'reference' => 'f08958c95a84453db03de1e05df7928dd223c652',
             'type' => 'project',
             'install_path' => __DIR__ . '/../../',
             'aliases' => array(),
