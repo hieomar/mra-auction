@@ -1,9 +1,9 @@
 <?php return array(
     'root' => array(
         'name' => 'omar/mra-auction',
-        'pretty_version' => 'dev-main',
-        'version' => 'dev-main',
-        'reference' => '0c6fb94728fed0778daf2aa2e08cc615f2a7ed6b',
+        'pretty_version' => 'dev-master',
+        'version' => 'dev-master',
+        'reference' => 'dbc7f06133b89275451b86dbb45284c19b7c3e45',
         'type' => 'project',
         'install_path' => __DIR__ . '/../../',
         'aliases' => array(),
@@ -20,9 +20,9 @@
             'dev_requirement' => false,
         ),
         'omar/mra-auction' => array(
-            'pretty_version' => 'dev-main',
-            'version' => 'dev-main',
-            'reference' => '0c6fb94728fed0778daf2aa2e08cc615f2a7ed6b',
+            'pretty_version' => 'dev-master',
+            'version' => 'dev-master',
+            'reference' => 'dbc7f06133b89275451b86dbb45284c19b7c3e45',
             'type' => 'project',
             'install_path' => __DIR__ . '/../../',
             'aliases' => array(),
