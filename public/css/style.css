@@ -532,18 +532,139 @@ footer {
   background-color: #f9f9f9;
 }
 
+/* --------------ITEM DETAILS START------------------------------------------------------------------------------------------------------------------------------------------ */
+.main {
+  margin: 1em 0;
+  min-height: 100vh;
+}
+
+.auction-details h1 {
+  font-size: 28px;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.auction-details p {
+  font-size: 14px;
+  color: #666;
+  margin-bottom: 8px;
+}
+
+/* Group related auction items */
+.auction-details div {
+  margin-bottom: 20px;
+}
+
+.container {
+  display: grid;
+  grid-template-columns: 4fr 5fr;
+  gap: 1em;
+  margin: auto;
+  width: 80%;
+}
+
+.product-details {
+}
+
+.product-details img {
+  width: 100%;
+  border-radius: 8px;
+  margin-bottom: 20px;
+}
+
+.product-details h1 {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+.product-details p {
+  margin-bottom: 15px;
+}
+
+.auction-details {
+}
+
+.auction-details-productStat {
+  display: flex;
+}
+.auction-details-productStat p {
+  margin-right: 2em;
+}
+
+.auction-details h2 {
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+
+.auction-info {
+  background: #dddddd;
+  display: grid;
+  border-radius: 5px;
+  padding: 0.5em;
+  grid-template-columns: repeat(3, 1fr); /* 3 equal columns */
+}
+
+.auction-info p {
+  text-align: center;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+.info-item {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  height: 100%;
+}
+
+.price {
+  font-weight: bold;
+}
+
+.bid-section {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.bid-section input {
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.timer {
+  font-size: 18px;
+  font-weight: bold;
+  color: #d9534f;
+  border-right: 0;
+}
+
+.bid-history {
+  margin-top: 20px;
+}
+
+.bid-history ul {
+  list-style: none;
+}
+
+.bid-history ul li {
+  margin-bottom: 10px;
+}
+
 /* Add a bid button style */
 .place-bid-button {
   display: block;
   width: 100%;
-  padding: 1rem;
-  margin-top: 1rem;
+  padding: 0.75em;
   background-color: #fecd0b;
   color: #094524;
   border: none;
   border-radius: 5px;
-  font-size: 1.1rem;
-  font-weight: bold;
   cursor: pointer;
   transition: all 0.3s ease;
 }
@@ -552,3 +673,26 @@ footer {
   background-color: #0b381b;
   color: #fff;
 }
+
+#seeMoreButton {
+  color: #007bff;
+  font-size: 14px;
+  cursor: pointer;
+  margin-top: 10px;
+  text-decoration: underline;
+  background-color: transparent;
+  border: none;
+  padding: 0;
+  transition: none;
+}
+
+#seeMoreButton:hover {
+  color: #0056b3;
+  text-decoration: none;
+}
+
+.hidden {
+  display: none;
+}
+
+/*--------------------- iTEM DETAILS END ----------------------------------------------------------------------------------------------------------------------------------------------- */
