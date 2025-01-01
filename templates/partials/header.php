@@ -13,8 +13,8 @@
                 <li><a href="/?page=about">About Us</a></li>
             </ul>
             <div class="auth-buttons">
-                <button class="auth-button login-btn" onclick="openModal('loginModal')">Login</button>
-                <button class="auth-button register-btn" onclick="openModal('registerModal')">Register</button>
+                <button class="button login-btn" onclick="openModal('loginModal')">Login</button>
+                <button class="button register-btn" onclick="openModal('registerModal')">Register</button>
             </div>
         </div>
     </nav>

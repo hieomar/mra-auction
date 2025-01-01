@@ -1,442 +1,554 @@
 /* General Styles */
 body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    background-color: #EFEEEF; /* Light Gray */
-    color: #094524; /* Dark Green for text */
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  background-color: white; /* Light Gray */
+  color: #094524; /* Dark Green for text */
+}
+
+a {
+  text-decoration: none;
 }
 
 /* Header and Navigation Styles */
 header {
-    background: #094524;
-    padding: 1rem 2rem;
+  background: #094524;
+  padding: 1em 0em;
 }
 
 header nav {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    max-width: 1200px;
-    margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 80%;
+  margin: 0 auto;
 }
 
 .logo-container {
-    flex: 0 0 auto;
+  flex: 0 0 auto;
 }
 
 .logo-container img {
-    height: 40px;
-    width: auto;
+  height: 40px;
+  width: auto;
 }
 
 .nav-links {
-    display: flex;
-    align-items: center;
-    gap: 2rem;
+  display: flex;
+  align-items: center;
+  gap: 2rem;
 }
 
 .nav-links ul {
-    display: flex;
-    gap: 2rem;
-    margin: 0;
-    padding: 0;
-    list-style: none;
+  display: flex;
+  gap: 2rem;
+  margin: 0;
+  padding: 0;
+  list-style: none;
 }
 
 .nav-links a {
-    color: #EFEEEF;
-    text-decoration: none;
-    font-weight: 500;
-    transition: color 0.3s ease;
+  color: #efeeef;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.3s ease;
 }
 
 .nav-links a:hover {
-    color: #FECD0B;
+  color: #fecd0b;
 }
 
 .auth-buttons {
-    display: flex;
-    gap: 1rem;
-    margin-left: 2rem;
+  display: flex;
+  gap: 1rem;
+  margin-left: 2rem;
 }
 
-.auth-button {
-    padding: 0.5rem 1rem;
-    border-radius: 4px;
-    font-weight: 500;
-    cursor: pointer;
-    transition: all 0.3s ease;
+/* -----------HOME START----------------------------------------------------------------------------------------------------------------------------------- */
+
+.home_hero_section {
+  position: relative;
+  height: 70vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  z-index: 1;
+  background: rgba(255, 255, 255, 0.1); /* Transparent white overlay */
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
 }
 
-.login-btn {
-    background: transparent;
-    border: 1px solid #FECD0B;
-    color: #FECD0B;
+.hero_wrapper {
+  width: 80%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
-.login-btn:hover {
-    background: #FECD0B;
-    color: #094524;
+.home_hero_section::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: url("https://scontent.fblz1-1.fna.fbcdn.net/v/t1.6435-9/60449207_2203406439751283_4517188779340988416_n.jpg?_nc_cat=109&ccb=1-7&_nc_sid=cc71e4&_nc_ohc=VYD6n0eruMgQ7kNvgGqTxmS&_nc_pt=5&_nc_zt=23&_nc_ht=scontent.fblz1-1.fna&_nc_gid=ADGLSAFbQS7My2iFF11atyP&oh=00_AYBt2uKGG5qZd1P3B2_Fybqi30LOellRlblHAd-tipCZlg&oe=679B1713")
+    no-repeat fixed center center/cover;
+  filter: brightness(50%);
+  z-index: -1;
 }
 
-.register-btn {
-    background: #FECD0B;
-    border: 1px solid #FECD0B;
-    color: #094524;
+.home_hero_section::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.4); /* Black overlay with opacity */
+  z-index: -1;
 }
 
-.register-btn:hover {
-    background: #0B381B;
-    color: #FECD0B;
+.hero_left,
+.hero_right {
+  flex: 1;
+  padding: 20px;
+  text-align: center;
 }
 
-header nav ul {
-    list-style: none;
-    display: flex;
-    justify-content: space-around;
-    padding: 0;
+.hero_left {
+  text-align: left;
 }
 
-header nav ul li a {
-    color: #EFEEEF; /* Light Gray */
-    text-decoration: none;
+.hero_left h1 {
+  font-size: 3rem;
 }
 
-/* Enhanced Modal Styles */
-.modal {
-    display: none;
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(9, 69, 36, 0.8); /* Dark green with opacity */
-    z-index: 1000;
-    backdrop-filter: blur(5px);
+.hero_right .percent {
+  font-size: 3rem;
+  font-weight: 800;
 }
 
-.modal-content {
-    position: relative;
-    background: #fff;
-    width: 90%;
-    max-width: 400px;
-    margin: 50px auto;
-    padding: 2.5rem;
-    border-radius: 15px;
-    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
-    animation: modalSlideIn 0.3s ease-out;
-}
-
-@keyframes modalSlideIn {
-    from {
-        transform: translateY(-50px);
-        opacity: 0;
-    }
-    to {
-        transform: translateY(0);
-        opacity: 1;
-    }
-}
-
-.modal-content h2 {
-    color: #094524;
-    text-align: center;
-    margin-bottom: 1.5rem;
-    font-size: 1.8rem;
-}
-
-.modal-content form {
-    display: flex;
-    flex-direction: column;
-    gap: 1rem;
-}
-
-.modal-content input {
-    padding: 12px 15px;
-    border: 2px solid #e0e0e0;
-    border-radius: 8px;
-    font-size: 1rem;
-    transition: border-color 0.3s ease;
-}
-
-.modal-content input:focus {
-    outline: none;
-    border-color: #FECD0B;
-    box-shadow: 0 0 0 3px rgba(254, 205, 11, 0.2);
-}
-
-.modal-content button[type="submit"] {
-    margin-top: 1rem;
-    padding: 12px;
-    border: none;
-    border-radius: 8px;
-    background: #FECD0B;
-    color: #094524;
-    font-size: 1rem;
-    font-weight: 600;
-    cursor: pointer;
-    transition: all 0.3s ease;
-}
-
-.modal-content button[type="submit"]:hover {
-    background: #094524;
-    color: #FECD0B;
-    transform: translateY(-2px);
-}
-
-.close-modal {
-    position: absolute;
-    top: 1rem;
-    right: 1rem;
-    font-size: 1.8rem;
-    color: #094524;
-    cursor: pointer;
-    transition: transform 0.3s ease;
-    width: 30px;
-    height: 30px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border-radius: 50%;
-}
-
-.close-modal:hover {
-    transform: rotate(90deg);
-    background: rgba(9, 69, 36, 0.1);
-}
-
-/* Form Validation Styles */
-.modal-content input:invalid {
-    border-color: #ff4444;
-}
-
-.modal-content input:valid {
-    border-color: #00C851;
-}
-
-/* Responsive Adjustments */
-@media (max-width: 480px) {
-    .modal-content {
-        width: 95%;
-        padding: 1.5rem;
-        margin: 20px auto;
-    }
+.hero_right {
+  text-align: right;
+  backdrop-filter: blur(30px);
+  height: 300px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  /* background: url("https://scontent.fblz1-1.fna.fbcdn.net/v/t1.6435-9/60449207_2203406439751283_4517188779340988416_n.jpg?_nc_cat=109&ccb=1-7&_nc_sid=cc71e4&_nc_ohc=VYD6n0eruMgQ7kNvgGqTxmS&_nc_pt=5&_nc_zt=23&_nc_ht=scontent.fblz1-1.fna&_nc_gid=ADGLSAFbQS7My2iFF11atyP&oh=00_AYBt2uKGG5qZd1P3B2_Fybqi30LOellRlblHAd-tipCZlg&oe=679B1713") */
+  /* no-repeat center center/cover; */
+  /* background: rgba(255, 255, 255, 0.2);
+  border-radius: 15px 90px 10px 100px;
+  /* box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); */
 }
 
 /* Auction Items Section */
 .auction-items {
-    margin: 2rem 0;
-    padding: 1rem;
-    background-color: #EFEEEF; /* Light Gray */
-    border: 1px solid #ddd;
-    border-radius: 5px;
+  width: 80%;
+  margin: 0 auto;
 }
 
 .auction-items h2 {
-    margin-bottom: 1rem;
-    font-size: 1.5rem;
-    color: #094524; /* Dark Green */
+  font-size: 1.5rem;
+  color: #094524; /* Dark Green */
 }
 
 /* Item Grid Layout */
 .item-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 1.5rem;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1.5rem;
 }
 
 /* Individual Auction Item */
 .auction-item {
-    border: 1px solid #ddd;
-    border-radius: 5px;
-    padding: 1rem;
-    text-align: center;
-    background-color: #fff;
-    transition: box-shadow 0.3s ease;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+
+  background-color: #fff;
+  transition: box-shadow 0.3s ease;
+}
+
+.auction_item_desc {
+  margin-top: auto;
+  padding: 1em;
+}
+.auction-info {
+  font-size: 0.85rem;
+  color: #555;
+  margin-top: 10px;
 }
 
 .auction-item:hover {
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 .auction-item img {
-    max-width: 100%;
-    height: auto;
-    border-bottom: 1px solid #ddd;
-    margin-bottom: 1rem;
+  overflow: hidden;
+  max-width: 100%;
+  height: 250px;
+  object-fit: cover;
 }
 
 .auction-item h3 {
-    font-size: 1.2rem;
-    margin-bottom: 0.5rem;
-    color: #094524; /* Dark Green */
+  font-size: 1.2rem;
+  color: #094524; /* Dark Green */
 }
 
 .auction-item p {
-    font-size: 0.9rem;
-    color: #555;
-    margin-bottom: 1rem;
+  font-size: 0.9rem;
+  color: #555;
+}
+
+.read-more {
+  right: 0px;
+  display: flex;
+  align-items: center;
+  font-size: 0.9rem;
+  color: #0073e6;
+  margin-top: 5px;
+  cursor: pointer;
+}
+
+.read-more .arrow-icon {
+  display: inline-block;
+  font-size: 1.2rem;
+  margin-left: 5px;
+  /* Angles the arrow */
+  transition: transform 0.3s;
+}
+
+.read-more:hover .arrow-icon {
+  transform: rotate(-45deg) translateX(5px); /* Slight animation on hover */
 }
 
 .bid-button {
-    display: inline-block;
-    background-color: #FECD0B; /* Yellow */
-    color: #094524; /* Dark Green */
-    padding: 0.5rem 1rem;
-    font-size: 0.9rem;
-    text-decoration: none;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
+  display: inline-block;
+  background-color: #fecd0b; /* Yellow */
+  color: #094524; /* Dark Green */
+  padding: 0.5rem 1rem;
+  font-size: 0.9rem;
+  text-decoration: none;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
 }
 
 .bid-button:hover {
-    background-color: #0B381B; /* Darker Green */
-    color: #fff;
+  background-color: #0b381b; /* Darker Green */
+  color: #fff;
+}
+
+/* -----------HOME END------------------------------------------------------------------------------------------------------------------------------------------------- */
+
+.button {
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.login-btn {
+  background: transparent;
+  border: 1px solid #fecd0b;
+  color: #fecd0b;
+}
+
+.login-btn:hover {
+  background: #fecd0b;
+  color: #094524;
+}
+
+.register-btn {
+  background: #fecd0b;
+  border: 1px solid #fecd0b;
+  color: #094524;
+}
+
+.register-btn:hover {
+  background: #0b381b;
+  color: #fecd0b;
+}
+
+header nav ul {
+  list-style: none;
+  display: flex;
+  justify-content: space-around;
+  padding: 0;
+}
+
+header nav ul li a {
+  color: #efeeef; /* Light Gray */
+  text-decoration: none;
+}
+
+/* Enhanced Modal Styles */
+.modal {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(9, 69, 36, 0.8); /* Dark green with opacity */
+  z-index: 1000;
+  backdrop-filter: blur(5px);
+}
+
+.modal-content {
+  position: relative;
+  background: #fff;
+  width: 90%;
+  max-width: 400px;
+  margin: 50px auto;
+  padding: 2.5rem;
+  border-radius: 15px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+  animation: modalSlideIn 0.3s ease-out;
+}
+
+@keyframes modalSlideIn {
+  from {
+    transform: translateY(-50px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+.modal-content h2 {
+  color: #094524;
+  text-align: center;
+  margin-bottom: 1.5rem;
+  font-size: 1.8rem;
+}
+
+.modal-content form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.modal-content input {
+  padding: 12px 15px;
+  border: 2px solid #e0e0e0;
+  border-radius: 8px;
+  font-size: 1rem;
+  transition: border-color 0.3s ease;
+}
+
+.modal-content input:focus {
+  outline: none;
+  border-color: #fecd0b;
+  box-shadow: 0 0 0 3px rgba(254, 205, 11, 0.2);
+}
+
+.modal-content button[type="submit"] {
+  margin-top: 1rem;
+  padding: 12px;
+  border: none;
+  border-radius: 8px;
+  background: #fecd0b;
+  color: #094524;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.modal-content button[type="submit"]:hover {
+  background: #094524;
+  color: #fecd0b;
+  transform: translateY(-2px);
+}
+
+.close-modal {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  font-size: 1.8rem;
+  color: #094524;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+  width: 30px;
+  height: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+}
+
+.close-modal:hover {
+  transform: rotate(90deg);
+  background: rgba(9, 69, 36, 0.1);
+}
+
+/* Form Validation Styles */
+.modal-content input:invalid {
+  border-color: #ff4444;
+}
+
+.modal-content input:valid {
+  border-color: #00c851;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 480px) {
+  .modal-content {
+    width: 95%;
+    padding: 1.5rem;
+    margin: 20px auto;
+  }
 }
 
 /* Footer */
 footer {
-    background: #094524; /* Dark Green */
-    color: #fff;
-    text-align: center;
-    padding: 1rem;
-    margin-top: 2rem;
+  background: #094524; /* Dark Green */
+  color: #fff;
+  text-align: center;
+  padding: 1rem;
+  margin-top: 2rem;
 }
 
 /* About Page Styles */
 .about-container {
-    margin: 2rem auto;
-    padding: 2rem;
-    max-width: 800px;
-    background-color: #fff;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    color: #094524; /* Dark Green */
+  margin: 2rem auto;
+  padding: 2rem;
+  max-width: 800px;
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  color: #094524; /* Dark Green */
 }
 
 .about-container h1 {
-    text-align: center;
-    margin-bottom: 1.5rem;
-    color: #094524; /* Dark Green */
+  text-align: center;
+  margin-bottom: 1.5rem;
+  color: #094524; /* Dark Green */
 }
 
 .about-container section {
-    margin-bottom: 2rem;
+  margin-bottom: 2rem;
 }
 
 .about-container h2 {
-    margin-bottom: 1rem;
-    color: #0B381B; /* Darker Green */
+  margin-bottom: 1rem;
+  color: #0b381b; /* Darker Green */
 }
 
-.about-container p, .about-container ul {
-    font-size: 1rem;
-    line-height: 1.6;
+.about-container p,
+.about-container ul {
+  font-size: 1rem;
+  line-height: 1.6;
 }
 
 .about-container ul {
-    list-style-type: disc;
-    padding-left: 1.5rem;
+  list-style-type: disc;
+  padding-left: 1.5rem;
 }
 
 .about-container ul li {
-    margin-bottom: 0.5rem;
+  margin-bottom: 0.5rem;
 }
 
 .about-container strong {
-    color: #FECD0B; /* Yellow for highlights */
+  color: #fecd0b; /* Yellow for highlights */
 }
 
 /* Item Details Page Styles */
 .item-details {
-    max-width: 800px;
-    margin: 2rem auto;
-    padding: 2rem;
-    background-color: #fff;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  max-width: 800px;
+  margin: 2rem auto;
+  padding: 2rem;
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 .item-details img {
-    width: 100%;
-    max-height: 400px;
-    object-fit: cover;
-    border-radius: 5px;
-    margin-bottom: 1.5rem;
+  width: 100%;
+  max-height: 400px;
+  object-fit: cover;
+  border-radius: 5px;
+  margin-bottom: 1.5rem;
 }
 
 .item-details h2 {
-    color: #094524;
-    font-size: 1.8rem;
-    margin-bottom: 1rem;
+  color: #094524;
+  font-size: 1.8rem;
+  margin-bottom: 1rem;
 }
 
 .item-details p {
-    color: #555;
-    line-height: 1.6;
-    margin-bottom: 1.5rem;
+  color: #555;
+  line-height: 1.6;
+  margin-bottom: 1.5rem;
 }
 
 /* Bids List Section */
 .bids-list {
-    max-width: 800px;
-    margin: 2rem auto;
-    padding: 2rem;
-    background-color: #fff;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  max-width: 800px;
+  margin: 2rem auto;
+  padding: 2rem;
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 .bids-list h1 {
-    color: #094524;
-    margin-bottom: 1.5rem;
-    font-size: 1.5rem;
+  color: #094524;
+  margin-bottom: 1.5rem;
+  font-size: 1.5rem;
 }
 
 .bids-list ul {
-    list-style: none;
-    padding: 0;
+  list-style: none;
+  padding: 0;
 }
 
 .bids-list li {
-    padding: 1rem;
-    border-bottom: 1px solid #eee;
-    color: #555;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    transition: background-color 0.3s ease;
+  padding: 1rem;
+  border-bottom: 1px solid #eee;
+  color: #555;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: background-color 0.3s ease;
 }
 
 .bids-list li:last-child {
-    border-bottom: none;
+  border-bottom: none;
 }
 
 .bids-list li:hover {
-    background-color: #f9f9f9;
+  background-color: #f9f9f9;
 }
 
 /* Add a bid button style */
 .place-bid-button {
-    display: block;
-    width: 100%;
-    padding: 1rem;
-    margin-top: 1rem;
-    background-color: #FECD0B;
-    color: #094524;
-    border: none;
-    border-radius: 5px;
-    font-size: 1.1rem;
-    font-weight: bold;
-    cursor: pointer;
-    transition: all 0.3s ease;
+  display: block;
+  width: 100%;
+  padding: 1rem;
+  margin-top: 1rem;
+  background-color: #fecd0b;
+  color: #094524;
+  border: none;
+  border-radius: 5px;
+  font-size: 1.1rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s ease;
 }
 
 .place-bid-button:hover {
-    background-color: #0B381B;
-    color: #fff;
+  background-color: #0b381b;
+  color: #fff;
 }

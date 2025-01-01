@@ -1,0 +1,5 @@
+{
+  "watch": ["*.php", "*.css"],
+  "ext": "php,css",
+  "exec": "concurrently \"php -S localhost:8000\" \"livereload .\""
+}
