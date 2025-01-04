@@ -1,5 +1,5 @@
 <head>
-
+    <link rel="stylesheet" href="styles.css">
 </head>
 <header>
     <nav>
@@ -7,7 +7,7 @@
             <a href="/"><img src="../../public/images/logo.svg" alt="MRA Online Auction"></a>
         </div>
         <div class="nav-links">
-            <ul>
+            <ul class="nav-list">
                 <li><a href="/?page=home">Home</a></li>
                 <li><a href="/?page=auctions">Auctions</a></li>
                 <li><a href="/?page=about">About Us</a></li>
@@ -16,6 +16,9 @@
                 <button class="button login-btn" onclick="openModal('loginModal')">Login</button>
                 <button class="button register-btn" onclick="openModal('registerModal')">Register</button>
             </div>
+        </div>
+        <div class="hamburger-menu" onclick="toggleMenu()">
+            &#9776;
         </div>
     </nav>
 
@@ -48,6 +51,7 @@
     </div>
 
     <script>
+        // Same JavaScript code as above
         function openModal(modalId) {
             document.getElementById(modalId).style.display = 'block';
         }
@@ -61,6 +65,12 @@
             if (event.target.classList.contains('modal')) {
                 event.target.style.display = 'none';
             }
+        }
+
+        // Toggle navigation menu for mobile
+        function toggleMenu() {
+            const navLinks = document.querySelector('.nav-links');
+            navLinks.classList.toggle('active');
         }
     </script>
 </header>

@@ -13,9 +13,10 @@ a {
 }
 
 /* Header and Navigation Styles */
+/* General Styles */
 header {
   background: #094524;
-  padding: 1em 0em;
+  padding: 1em 0;
 }
 
 header nav {
@@ -24,10 +25,6 @@ header nav {
   align-items: center;
   width: 80%;
   margin: 0 auto;
-}
-
-.logo-container {
-  flex: 0 0 auto;
 }
 
 .logo-container img {
@@ -64,6 +61,124 @@ header nav {
   display: flex;
   gap: 1rem;
   margin-left: 2rem;
+}
+
+.hamburger-menu {
+  display: none;
+  cursor: pointer;
+  font-size: 30px;
+  color: #efeeef;
+}
+
+.modal {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  justify-content: center;
+  align-items: center;
+}
+
+.modal-content {
+  background-color: white;
+  padding: 20px;
+  border-radius: 5px;
+  max-width: 400px;
+  width: 100%;
+}
+
+.close-modal {
+  cursor: pointer;
+  position: absolute;
+  top: 10px;
+  right: 10px;
+}
+
+@media (max-width: 768px) {
+  header nav {
+    width: 95%;
+  }
+  .nav-links {
+    position: absolute;
+    top: 60px;
+    right: 0;
+    background: #094524;
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+    justify-content: end;
+    gap: 2rem;
+    transform: translateX(100%);
+    transition: transform 0.3s ease;
+    padding: 1em;
+    text-align: right;
+  }
+
+  .nav-list {
+    flex-direction: column;
+  }
+
+  .nav-links.active {
+    transform: translateX(0);
+  }
+
+  .hamburger-menu {
+    display: block;
+  }
+
+  .auth-buttons {
+    display: none;
+  }
+}
+
+.modal {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  justify-content: center;
+  align-items: center;
+}
+
+.modal-content {
+  background-color: white;
+  padding: 20px;
+  border-radius: 5px;
+  max-width: 400px;
+  width: 100%;
+}
+
+.close-modal {
+  cursor: pointer;
+  position: absolute;
+  top: 10px;
+  right: 10px;
+}
+
+@media (max-width: 768px) {
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .nav-links.active {
+    display: flex;
+  }
+
+  .hamburger-menu {
+    display: block;
+  }
+
+  .auth-buttons {
+    display: none;
+  }
 }
 
 /* -----------HOME START----------------------------------------------------------------------------------------------------------------------------------- */
@@ -148,6 +263,7 @@ header nav {
 
 /* Auction Items Section */
 .auction-items {
+  position: relative;
   width: 80%;
   margin: 0 auto;
 }
@@ -166,32 +282,49 @@ header nav {
 
 /* Individual Auction Item */
 .auction-item {
+  position: relative; /* Ensures child absolute elements are positioned relative to this container */
   border: 1px solid #ddd;
   border-radius: 5px;
-
   background-color: #fff;
   transition: box-shadow 0.3s ease;
 }
 
-.auction_item_desc {
-  margin-top: auto;
-  padding: 1em;
-}
-.auction-info {
-  font-size: 0.85rem;
-  color: #555;
-  margin-top: 10px;
-}
-
-.auction-item:hover {
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-}
-
 .auction-item img {
-  overflow: hidden;
+  display: block;
   max-width: 100%;
   height: 250px;
   object-fit: cover;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+}
+
+.price-container {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  background: rgba(255, 255, 255, 0.9);
+  padding: 5px 10px;
+  border-radius: 4px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  z-index: 1; /* Ensure the price container is above the image */
+}
+
+.price-info {
+  display: flex;
+  justify-content: space-between;
+  font-size: 14px;
+  margin-bottom: 2px;
+  color: #094524;
+}
+
+.label {
+  font-weight: bold;
+}
+
+.starting-price,
+.current-price {
+  font-weight: normal;
+  margin-left: 1em;
 }
 
 .auction-item h3 {
@@ -202,6 +335,10 @@ header nav {
 .auction-item p {
   font-size: 0.9rem;
   color: #555;
+}
+
+.auction_item_desc {
+  padding: 0 1em 1em 1em;
 }
 
 .read-more {
@@ -536,6 +673,9 @@ footer {
 .main {
   margin: 1em 0;
   min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .auction-details h1 {
@@ -693,6 +833,15 @@ footer {
 
 .hidden {
   display: none;
+}
+
+@media (max-width: 680px) {
+  .container {
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+    width: 95%;
+  }
 }
 
 /*--------------------- iTEM DETAILS END ----------------------------------------------------------------------------------------------------------------------------------------------- */
