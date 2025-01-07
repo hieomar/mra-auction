@@ -1,4 +1,4 @@
-<?php $this->layout('layouts/main', ['title' => 'Home']) ?>
+<?php $this->layout('layouts/main', ['title' => $title]) ?>
 <!DOCTYPE html>
 <html lang="en">
 
