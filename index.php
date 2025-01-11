@@ -33,6 +33,15 @@ switch ($page) {
             echo "Auction item ID is required.";
         }
         break;
+    case 'station-manager':
+        echo $templates->render('pages/station-manager/index', ['title' => 'Station Manager']);
+        break;
+    case 'addItem':
+        echo $templates->render('pages/station-manager/addItem', ['title' => 'Add Auction Item']);
+        break;
+    case 'admin':
+        echo $templates->render('pages/admin/index', ['title' => 'Admin Dashboard']);
+        break;
     default:
         echo $templates->render('pages/home', ['title' => 'Home']);
         break;

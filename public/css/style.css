@@ -4,8 +4,10 @@ body {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  background-color: white; /* Light Gray */
-  color: #094524; /* Dark Green for text */
+  background-color: white;
+  /* Light Gray */
+  color: #094524;
+  /* Dark Green for text */
 }
 
 a {
@@ -102,6 +104,7 @@ header nav {
   header nav {
     width: 95%;
   }
+
   .nav-links {
     position: absolute;
     top: 60px;
@@ -192,7 +195,8 @@ header nav {
   justify-content: center;
   color: white;
   z-index: 1;
-  background: rgba(255, 255, 255, 0.1); /* Transparent white overlay */
+  background: rgba(255, 255, 255, 0.1);
+  /* Transparent white overlay */
   box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
 }
 
@@ -210,8 +214,7 @@ header nav {
   left: 0;
   width: 100%;
   height: 100%;
-  background: url("https://scontent.fblz1-1.fna.fbcdn.net/v/t1.6435-9/60449207_2203406439751283_4517188779340988416_n.jpg?_nc_cat=109&ccb=1-7&_nc_sid=cc71e4&_nc_ohc=VYD6n0eruMgQ7kNvgGqTxmS&_nc_pt=5&_nc_zt=23&_nc_ht=scontent.fblz1-1.fna&_nc_gid=ADGLSAFbQS7My2iFF11atyP&oh=00_AYBt2uKGG5qZd1P3B2_Fybqi30LOellRlblHAd-tipCZlg&oe=679B1713")
-    no-repeat fixed center center/cover;
+  background: url("https://scontent.fblz1-1.fna.fbcdn.net/v/t1.6435-9/60449207_2203406439751283_4517188779340988416_n.jpg?_nc_cat=109&ccb=1-7&_nc_sid=cc71e4&_nc_ohc=VYD6n0eruMgQ7kNvgGqTxmS&_nc_pt=5&_nc_zt=23&_nc_ht=scontent.fblz1-1.fna&_nc_gid=ADGLSAFbQS7My2iFF11atyP&oh=00_AYBt2uKGG5qZd1P3B2_Fybqi30LOellRlblHAd-tipCZlg&oe=679B1713") no-repeat fixed center center/cover;
   filter: brightness(50%);
   z-index: -1;
 }
@@ -223,7 +226,8 @@ header nav {
   left: 0;
   width: 100%;
   height: 100%;
-  background: rgba(0, 0, 0, 0.4); /* Black overlay with opacity */
+  background: rgba(0, 0, 0, 0.4);
+  /* Black overlay with opacity */
   z-index: -1;
 }
 
@@ -271,7 +275,8 @@ header nav {
 
 .auction-items h2 {
   font-size: 1.5rem;
-  color: #094524; /* Dark Green */
+  color: #094524;
+  /* Dark Green */
 }
 
 /* Item Grid Layout */
@@ -283,7 +288,8 @@ header nav {
 
 /* Individual Auction Item */
 .auction-item {
-  position: relative; /* Ensures child absolute elements are positioned relative to this container */
+  position: relative;
+  /* Ensures child absolute elements are positioned relative to this container */
   border: 1px solid #ddd;
   border-radius: 5px;
   background-color: #fff;
@@ -308,7 +314,8 @@ header nav {
   padding: 5px 10px;
   border-radius: 4px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  z-index: 1; /* Ensure the price container is above the image */
+  z-index: 1;
+  /* Ensure the price container is above the image */
 }
 
 .price-info {
@@ -331,7 +338,8 @@ header nav {
 
 .auction-item h3 {
   font-size: 1.2rem;
-  color: #094524; /* Dark Green */
+  color: #094524;
+  /* Dark Green */
 }
 
 .auction-item p {
@@ -362,13 +370,16 @@ header nav {
 }
 
 .read-more:hover .arrow-icon {
-  transform: rotate(-45deg) translateX(5px); /* Slight animation on hover */
+  transform: rotate(-45deg) translateX(5px);
+  /* Slight animation on hover */
 }
 
 .bid-button {
   display: inline-block;
-  background-color: #fecd0b; /* Yellow */
-  color: #094524; /* Dark Green */
+  background-color: #fecd0b;
+  /* Yellow */
+  color: #094524;
+  /* Dark Green */
   padding: 0.5rem 1rem;
   font-size: 0.9rem;
   text-decoration: none;
@@ -379,7 +390,8 @@ header nav {
 }
 
 .bid-button:hover {
-  background-color: #0b381b; /* Darker Green */
+  background-color: #0b381b;
+  /* Darker Green */
   color: #fff;
 }
 
@@ -423,7 +435,8 @@ header nav ul {
 }
 
 header nav ul li a {
-  color: #efeeef; /* Light Gray */
+  color: #efeeef;
+  /* Light Gray */
   text-decoration: none;
 }
 
@@ -435,7 +448,8 @@ header nav ul li a {
   left: 0;
   width: 100%;
   height: 100%;
-  background: rgba(9, 69, 36, 0.8); /* Dark green with opacity */
+  background: rgba(9, 69, 36, 0.8);
+  /* Dark green with opacity */
   z-index: 1000;
   backdrop-filter: blur(5px);
 }
@@ -457,6 +471,7 @@ header nav ul li a {
     transform: translateY(-50px);
     opacity: 0;
   }
+
   to {
     transform: translateY(0);
     opacity: 1;
@@ -550,7 +565,8 @@ header nav ul li a {
 
 /* Footer */
 footer {
-  background: #094524; /* Dark Green */
+  background: #094524;
+  /* Dark Green */
   color: #fff;
   text-align: center;
   padding: 1rem;
@@ -565,13 +581,15 @@ footer {
   background-color: #fff;
   border-radius: 10px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  color: #094524; /* Dark Green */
+  color: #094524;
+  /* Dark Green */
 }
 
 .about-container h1 {
   text-align: center;
   margin-bottom: 1.5rem;
-  color: #094524; /* Dark Green */
+  color: #094524;
+  /* Dark Green */
 }
 
 .about-container section {
@@ -580,7 +598,8 @@ footer {
 
 .about-container h2 {
   margin-bottom: 1rem;
-  color: #0b381b; /* Darker Green */
+  color: #0b381b;
+  /* Darker Green */
 }
 
 .about-container p,
@@ -599,7 +618,8 @@ footer {
 }
 
 .about-container strong {
-  color: #fecd0b; /* Yellow for highlights */
+  color: #fecd0b;
+  /* Yellow for highlights */
 }
 
 /* Item Details Page Styles */
@@ -670,6 +690,7 @@ footer {
 .bids-list li:hover {
   background-color: #f9f9f9;
 }
+
 /*  */
 /*  */
 /*  */
@@ -708,8 +729,7 @@ footer {
   width: 80%;
 }
 
-.product-details {
-}
+.product-details {}
 
 .product-details img {
   width: 100%;
@@ -726,12 +746,12 @@ footer {
   margin-bottom: 15px;
 }
 
-.auction-details {
-}
+.auction-details {}
 
 .auction-details-productStat {
   display: flex;
 }
+
 .auction-details-productStat p {
   margin-right: 2em;
 }
@@ -746,7 +766,8 @@ footer {
   display: grid;
   border-radius: 5px;
   padding: 0.5em;
-  grid-template-columns: repeat(3, 1fr); /* 3 equal columns */
+  grid-template-columns: repeat(3, 1fr);
+  /* 3 equal columns */
 }
 
 .auction-info p {
@@ -993,4 +1014,7 @@ footer {
     align-self: flex-end;
   }
 }
+
 /*----------------------------------- Auctions End --------------------------------------------------------------------------------------------------------*/
+
+/*-----------------------------------Station managere--------------------------------------------------------------------------------------------------------*/
