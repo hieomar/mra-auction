@@ -3,26 +3,41 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title><?= $this->e($title) ?></title>
-    <link rel="stylesheet" href="../../public/css/style.css">
+    <title>Payment Page</title>
+    <!-- Add jQuery before the Paychangu script -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://in.paychangu.com/js/popup.js"></script>
 </head>
 <body>
-    <header>
-        <nav>
-            <a href="/"><img src="../../public/images/logo.svg" alt="MRA Online Auction"></a>
-            <ul>
-                <li><a href="/?page=home">Home</a></li>
-                <li><a href="/?page=auctions">Auctions</a></li>
-                <li><a href="/?page=about">About Us</a></li>
-            </ul>
-        </nav>
-    </header>
-    <main>
-        <?= $this->section('content') ?>
-    </main>
-    
-    <footer>
-        <p>&copy; <?= date('Y') ?> MRA Online Auction. All rights reserved.</p>
-    </footer>
+    <form>
+        <div id="wrapper"></div>
+        <button type="button" onClick="makePayment()">Pay Now</button>
+    </form>
+
+    <script>
+        function makePayment() {
+            PaychanguCheckout({
+                "public_key": "pub-live-zcHvb1mKxXofzmYBvjnobwvlYgUBqYWn",
+                "tx_ref": '' + Math.floor((Math.random() * 1000000000) + 1),
+                "amount": 1000,
+                "currency": "MWK", 
+                "callback_url": "https://example.com/callbackurl",
+                "return_url": "https://example.com/returnurl",
+                "customer": {
+                    "email": "yourmail@example.com",
+                    "first_name": "Mac",
+                    "last_name": "Phiri"
+                },
+                "customization": {
+                    "title": "Test Payment",
+                    "description": "Payment Description"
+                },
+                "meta": {
+                    "uuid": "uuid",
+                    "response": "Response"
+                }
+            });
+        }
+    </script>
 </body>
 </html>

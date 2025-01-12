@@ -101,6 +101,8 @@
                         <th>Bid Amount</th>
                         <th>Bid Time</th>
                         <th>Result</th>
+                        <th>Payment Countdown</th>
+                        <th>Payment Action</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -109,13 +111,30 @@
                         <td>MK 320,000</td>
                         <td>Jan 15, 2024 3:45 PM</td>
                         <td><span class="status-badge completed">Won</span></td>
+                        <td>5h 30m</td>
+                        <td>
+                            <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+                            <script src="https://in.paychangu.com/js/popup.js"></script>
+                            <div id="wrapper"></div>
+                            <button class="view-btn" onClick="makePayment()">Pay Now</button>
+                            <button class="view-btn">View Details</button>
+                        </td>
                     </tr>
                     <tr>
                         <td>HP Printer</td>
                         <td>MK 180,000</td>
                         <td>Jan 15, 2024 2:30 PM</td>
                         <td><span class="status-badge pending">Pending</span></td>
+                        <td><span class="status-badge pending">Pending</span></td>
+                        <td> <span class="status-badge pending">Pending</span></td>
                     </tr>
+                    <tr>
+                        <td>HP Printer</td>
+                        <td>MK 180,000</td>
+                        <td>Jan 15, 2024 2:30 PM</td>
+                        <td><span class="status-badge completed">Won</span></td>
+                        <td><span class="status-badge completed">Complete</span></td>
+                        <td> <span class="status-badge completed">Paid</span></td>
                 </tbody>
             </table>
         </section>
@@ -321,4 +340,29 @@
             alert('Error generating PDF. Please try again.');
         });
     });
+</script>
+<script>
+    function makePayment() {
+        PaychanguCheckout({
+            "public_key": "pub-live-zcHvb1mKxXofzmYBvjnobwvlYgUBqYWn",
+            "tx_ref": '' + Math.floor((Math.random() * 1000000000) + 1),
+            "amount": 320000,
+            "currency": "MWK",
+            "callback_url": "https://example.com/callbackurl",
+            "return_url": "https://example.com/returnurl",
+            "customer": {
+                "email": "yourmail@example.com",
+                "first_name": "Mac",
+                "last_name": "Phiri",
+            },
+            "customization": {
+                "title": "Test Payment",
+                "description": "Payment Description",
+            },
+            "meta": {
+                "uuid": "uuid",
+                "response": "Response"
+            }
+        });
+    }
 </script>
