@@ -39,7 +39,7 @@ switch ($page) {
     case 'addItem':
         echo $templates->render('pages/station-manager/addItem', ['title' => 'Add Auction Item']);
         break;
-    case 'report':
+    case 'auction-report':
         echo $templates->render('pages/station-manager/report', ['title' => 'Auction Report']);
         break;
     case 'admin':

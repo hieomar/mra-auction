@@ -61,3 +61,23 @@ function editStationManager(id) {
     // Show modal           
     openModal('editManagerModal');
 }
+
+document.getElementById('exportPdfBtn').addEventListener('click', function () {
+    // Get the report container
+    const element = document.querySelector('.report-container');
+
+    // Configure PDF options
+    const opt = {
+        margin: 10,
+        filename: 'auction-report.pdf',
+        image: { type: 'jpeg', quality: 0.98 },
+        html2canvas: { scale: 2 },
+        jsPDF: { unit: 'mm', format: 'a4', orientation: 'portrait' }
+    };
+
+    // Generate and download PDF
+    html2pdf().set(opt).from(element).save().catch(err => {
+        console.error('Error generating PDF:', err);
+        alert('Error generating PDF. Please try again.');
+    });
+});

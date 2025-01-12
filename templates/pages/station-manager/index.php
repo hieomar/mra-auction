@@ -14,6 +14,9 @@
             <button class="add-item-btn" onclick="location.href='/?page=addItem'">
                 <span>+</span> Add New Item
             </button>
+            <button class="export-btn" onclick="location.href='/?page=auction-report'">
+                <span>Export Report</span>
+            </button>
         </div>
     </div>
 
@@ -53,65 +56,6 @@
     </div>
 </div>
 
-<!-- <div id="editItemModal" class="modal">
-    <div class="modal-content">
-        <span class="close-modal" onclick="closeModal('editItemModal' )">&times;</span>
-        <h2>Edit Auction Item</h2>
-        <form id="editItemForm" class="edit-item-form">
-            <input type="hidden" id="editItemId" name="itemId">
-
-            <div class="form-group">
-                <label for="editItemName">Item Name*</label>
-                <input type="text" id="editItemName" name="itemName" required>
-            </div>
-
-            <div class="form-group">
-                <label for="editDescription">Description*</label>
-                <textarea id="editDescription" name="description" rows="4" required></textarea>
-            </div>
-
-            <div class="form-row">
-                <div class="form-group">
-                    <label for="editStartingPrice">Starting Price (MK)*</label>
-                    <input type="number" id="editStartingPrice" name="startingPrice" min="0" required>
-                </div>
-
-                <div class="form-group">
-                    <label for="editCategory">Category*</label>
-                    <select id="editCategory" name="category" required>
-                        <option value="">Select Category</option>
-                        <option value="electronics">Electronics</option>
-                        <option value="furniture">Furniture</option>
-                        <option value="vehicles">Vehicles</option>
-                        <option value="other">Other</option>
-                    </select>
-                </div>
-            </div>
-
-            <div class="form-row">
-                <div class="form-group">
-                    <label for="editEndDate">End Date*</label>
-                    <input type="date" id="editEndDate" name="endDate" required>
-                </div>
-                <div class="form-group">
-                    <label for="editEndTime">End Time*</label>
-                    <input type="time" id="editEndTime" name="endTime" required>
-                </div>
-            </div>
-
-            <div class="form-group">
-                <label for="editItemImage">Item Image</label>
-                <input type="file" id="editItemImage" name="itemImage" accept="image/*">
-                <div id="editImagePreview" class="image-preview"></div>
-            </div>
-
-            <div class="form-actions">
-                <button type="button" onclick="closeEditModal()" class="cancel-btn">Cancel</button>
-                <button type="submit" class="submit-btn">Save Changes</button>
-            </div>
-        </form>
-    </div>
-</div> -->
 <?php $this->insert('partials/editItemModal') ?>
 <style>
     .manager-container {
@@ -145,7 +89,8 @@
         width: 300px;
     }
 
-    .add-item-btn {
+    .add-item-btn,
+    .export-btn {
         background-color: #094524;
         color: white;
         padding: 0.5rem 1rem;

@@ -105,10 +105,40 @@
         padding: 5px 0;
         border-bottom: 1px solid #e0e0e0;
     }
+
+    .export-container {
+        text-align: right;
+        margin-bottom: 20px;
+    }
+
+    .export-btn {
+        background: #094524;
+        color: white;
+        border: none;
+        padding: 10px 20px;
+        border-radius: 4px;
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+    }
+
+    .export-btn .pdf-icon {
+        margin-right: 8px;
+    }
 </style>
 
 <div class="main-report-content">
-    <div class=" report-container">
+    <div class="report-container">
+        <!-- Add export button container -->
+        <div class="export-container">
+            <button id="exportPdfBtn" class="export-btn">
+                <svg class="pdf-icon" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24">
+                    <path fill="currentColor" d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-9.5 8.5c0 .83-.67 1.5-1.5 1.5H7v2H5.5V9H8c.83 0 1.5.67 1.5 1.5v1zm10 5.5H13v-6h1.5v4.5h2.5V17zm-5-4.5h-1v3H12v-3z" />
+                </svg>
+                Export PDF
+            </button>
+        </div>
+
         <!-- General Auction Information -->
         <section class="section">
             <h2 class="section-title">General Auction Information</h2>
@@ -246,3 +276,4 @@
         </section>
     </div>
 </div>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
