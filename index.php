@@ -39,6 +39,9 @@ switch ($page) {
     case 'addItem':
         echo $templates->render('pages/station-manager/addItem', ['title' => 'Add Auction Item']);
         break;
+    case 'report':
+        echo $templates->render('pages/station-manager/report', ['title' => 'Auction Report']);
+        break;
     case 'admin':
         echo $templates->render('pages/admin/index', ['title' => 'Admin Dashboard']);
         break;

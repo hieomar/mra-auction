@@ -17,12 +17,37 @@
     <div class="admin-nav">
         <button class="tab-btn active" data-tab="items">Auction Items</button>
         <button class="tab-btn" data-tab="users">Users</button>
-        <button class="tab-btn" data-tab="stations">Add Manager</button>
-        <button class="tab-btn" data-tab="reports">Reports</button>
     </div>
 
+    <!-- User Management Options (visible only when Users tab is active) -->
+    <div id="userManagementOptions" class="user-management-options" style="display: none;">
+        <div class="management-buttons">
+            <button class="tab-btn" onclick="openModal('addManagerModal')">Add Manager</button>
+            <button class="tab-btn" onclick="openModal('reportsModal')">Reports</button>
+        </div>
+        <div class="filters">
+            <div class="filter-dropdown">
+                <select id="userTypeFilter">
+                    <option value="all">All Users</option>
+                    <option value="bidder">Bidders</option>
+                    <option value="manager">Station Managers</option>
+                    <option value="admin">Admins</option>
+                </select>
+            </div>
+            <div class="filter-dropdown">
+                <select id="stationTypeFilter">
+                    <option value="all">All Stations</option>
+                    <option value="lilongwe">Lilongwe</option>
+                    <option value="blantyre">Blantyre</option>
+                    <option value="mzuzu">Mzuzu</option>
+                </select>
+            </div>
+        </div>
+    </div>
+
+
     <!-- Auction Items Tab -->
-    <div class="tab-content active" id="items-tab">
+    <div class=" tab-content active" id="items-tab">
         <table class="admin-table">
             <thead>
                 <tr>
@@ -80,7 +105,7 @@
                     <td><span class="status-active">Active</span></td>
                     <td>
                         <div class="action-buttons">
-                            <button class="edit-btn" onclick="editUser(1)">Edit</button>
+                            <button class="edit-btn" onclick="editStationManager(1)">Edit</button>
                             <button class="delete-btn" onclick="deleteUser(1)">Delete</button>
                         </div>
                     </td>
@@ -90,6 +115,21 @@
     </div>
 </div>
 
+<!-- MODALS -->
+
+<!-- Add Manager Modal
+<?php $this->insert('partials/addManagerModal') ?>
+
+<!-- Reports Modal -->
+<div id="reportsModal" class="modal">
+    <div class="modal-content">
+        <span class="close-modal" onclick="closeModal('reportsModal')">&times;</span>
+        <h2>Reports</h2>
+        <p>Reports go here...</p>
+    </div>
+</div>
+
+<!-- Edit Item Modal -->
 <style>
     .admin-dashboard {
         padding: 2rem;
@@ -168,12 +208,31 @@
         border-radius: 12px;
         font-size: 0.875rem;
     }
+
+    .user-management-options {
+        margin: 1rem 0;
+        padding: 1rem;
+        background-color: #f8f9fa;
+        border-radius: 4px;
+    }
+
+    .management-buttons {
+        display: flex;
+        gap: 1rem;
+        margin-bottom: 1rem;
+    }
+
+    .filters {
+        display: flex;
+        gap: 1rem;
+    }
 </style>
 
 <script>
     // Tab switching functionality
     const tabButtons = document.querySelectorAll('.tab-btn');
     const tabContents = document.querySelectorAll('.tab-content');
+    const userManagementOptions = document.getElementById('userManagementOptions');
 
     tabButtons.forEach(button => {
         button.addEventListener('click', () => {
@@ -184,6 +243,13 @@
             // Add active class to clicked button and corresponding content
             button.classList.add('active');
             document.getElementById(`${button.dataset.tab}-tab`).classList.add('active');
+
+            // Show/hide user management options based on active tab
+            if (button.dataset.tab === 'users') {
+                userManagementOptions.style.display = 'block';
+            } else {
+                userManagementOptions.style.display = 'none';
+            }
         });
     });
 
@@ -213,10 +279,6 @@
         }
     }
 
-    function editUser(id) {
-        // Implement edit user functionality
-        console.log('Editing user:', id);
-    }
 
     function deleteUser(id) {
         if (confirm('Are you sure you want to delete this user?')) {
@@ -225,3 +287,8 @@
         }
     }
 </script>
+
+<?php
+$this->insert('partials/editItemModal');
+$this->insert('partials/editStation-managerModal')
+?>

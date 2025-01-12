@@ -31,5 +31,7 @@
     </main>
     <?php $this->insert('partials/footer') ?>
 </body>
+<script src="../../public/js/editItem.js">
+</script>
 
 </html>
