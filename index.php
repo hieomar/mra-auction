@@ -33,6 +33,9 @@ switch ($page) {
             echo "Auction item ID is required.";
         }
         break;
+    case 'bidder':
+        echo $templates->render('pages/bidder/bid-records', ['title' => 'Bidder Dashboard']);
+        break;
     case 'station-manager':
         echo $templates->render('pages/station-manager/index', ['title' => 'Station Manager']);
         break;
@@ -44,6 +47,9 @@ switch ($page) {
         break;
     case 'admin':
         echo $templates->render('pages/admin/index', ['title' => 'Admin Dashboard']);
+        break;
+    case 'admin-reports':
+        echo $templates->render('pages/admin/report', ['title' => 'User Reports']);
         break;
     default:
         echo $templates->render('pages/home', ['title' => 'Home']);

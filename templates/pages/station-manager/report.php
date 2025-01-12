@@ -1,3 +1,4 @@
+<?php $this->layout('layouts/main', ['title' => 'Auction Report']) ?>
 <style>
     .main-report-content {
         font-family: Arial, sans-serif;
